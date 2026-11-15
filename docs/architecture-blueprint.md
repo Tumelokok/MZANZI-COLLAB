@@ -1,6 +1,6 @@
 # Mzansi Collab architecture blueprint (proposal)
 
-**Status:** PROPOSED — founder approval required before implementation.
+**Status:** Account-layer decisions superseded on 15 November 2026 by [the implemented Supabase foundation](platform-phase-2.md). The remaining campaign, payment, hosting and background-work proposals below are still future scope.
 
 This document separates confirmed product needs from an implementation direction for Phase 2. It is not a commitment to any provider, pricing model or irreversible schema.
 

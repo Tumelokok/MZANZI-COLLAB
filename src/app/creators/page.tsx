@@ -24,7 +24,7 @@ export default function CreatorsPage() {
       <section className="detail-hero detail-hero-image">
         <Image src="/images/solo-fashion.png" alt="Illustrative solo creator filming in a Johannesburg studio" fill priority sizes="100vw" className="detail-hero-photo" />
         <div className="detail-hero-overlay" />
-        <div className="detail-hero-copy detail-shell"><p className="eyebrow"><span /> Mzansi Collab for creators</p><h1>Bring your creative work <em>into the room.</em></h1><p>From content creators and musicians to photographers, models and producers — Mzansi Collab is being built to help creative people present their value and find meaningful commercial opportunities.</p><div className="detail-actions"><Link className="button button-gold" href="/#get-started">I&apos;m ready to create <span aria-hidden="true">→</span></Link><Link className="button button-ghost" href="#creator-tools">See what&apos;s coming <span aria-hidden="true">↓</span></Link></div></div>
+        <div className="detail-hero-copy detail-shell"><p className="eyebrow"><span /> Mzansi Collab for creators</p><h1>Bring your creative work <em>into the room.</em></h1><p>From content creators and musicians to photographers, models and producers — Mzansi Collab is being built to help creative people present their value and find meaningful commercial opportunities.</p><div className="detail-actions"><Link className="button button-gold" href="/signup">I&apos;m ready to create <span aria-hidden="true">→</span></Link><Link className="button button-ghost" href="#creator-tools">See what&apos;s coming <span aria-hidden="true">↓</span></Link></div></div>
       </section>
 
       <CreatorCommunity />
@@ -35,7 +35,7 @@ export default function CreatorsPage() {
 
       <section className="video-section"><div className="detail-shell video-layout"><div><p className="eyebrow"><span /> Watch & learn</p><h2>Practical creative knowledge, <em>on screen.</em></h2><p>Mzansi Collab&apos;s future YouTube programme will bring creator conversations, campaign breakdowns and practical professional advice into one accessible learning library.</p><Link href="/community" className="text-link">Explore the community vision <span aria-hidden="true">→</span></Link></div><div className="video-placeholder"><span className="play-button" aria-hidden="true">▶</span><div><strong>Mzansi Collab presents</strong><p>Creator conversations, coming soon.</p></div><small>YouTube-ready video showcase</small></div></div></section>
 
-      <section className="detail-cta"><div className="detail-shell"><p className="eyebrow"><span /> Make the next move</p><h2>Your creativity has a place in the <em>economy.</em></h2><p>Build your professional presence with Mzansi Collab as the platform takes shape.</p><Link className="button button-gold" href="/#get-started">Explore Mzansi Collab <span aria-hidden="true">→</span></Link></div></section>
+      <section className="detail-cta"><div className="detail-shell"><p className="eyebrow"><span /> Make the next move</p><h2>Your creativity has a place in the <em>economy.</em></h2><p>Build your professional presence with Mzansi Collab as the platform takes shape.</p><Link className="button button-gold" href="/signup">Explore Mzansi Collab <span aria-hidden="true">→</span></Link></div></section>
     </main><SiteFooter /></>
   );
 }

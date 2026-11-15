@@ -4,7 +4,7 @@ The public web experience for **Mzansi Collab** — a South African platform in 
 
 ## Current status
 
-Phase 1, the branded public website, is implemented. It includes a public landing page plus dedicated journeys for creators and businesses. Registration, authenticated creator discovery and campaign management are still to be built.
+The public website and Phase 2 account foundation are implemented. Creator/business registration, login, profile dashboards, creator-only tokens, reviewed verification and community-rated discovery connect to Supabase. Campaign management and direct messaging remain planned. No public deployment has been made.
 
 ## Run locally
 
@@ -18,6 +18,7 @@ Open [http://localhost:3000](http://localhost:3000). For production checks, run:
 
 ```bash
 npm run lint
+npm run test:db
 npm run build
 ```
 
@@ -36,9 +37,13 @@ npm run build
 
 - Approved assets live in `public/branding`; their originals remain in the repository-level `mzansi-collab-brand-kit` directory.
 - `turbopack.root` points at this app to avoid the parent placeholder lockfile affecting root detection. The production build uses webpack because Turbopack's CSS worker cannot bind its internal local port in this environment.
-- Architecture choices for the product backend require founder approval before implementation. See [`docs/architecture-blueprint.md`](docs/architecture-blueprint.md).
+- Supabase Auth, PostgreSQL and Storage power the account layer. Copy `.env.example` to an ignored `.env.local` for local configuration. See [`docs/platform-phase-2.md`](docs/platform-phase-2.md) for migration, setup, token rules and remaining integration work.
 
 ## Documentation
+
+- [`docs/platform-phase-2.md`](docs/platform-phase-2.md) — implemented account layer, setup and validation.
+- [`docs/social-platform-capabilities.md`](docs/social-platform-capabilities.md) — follower-sync and task-verification capabilities and provider restrictions.
+- [`docs/platform-media-assets.md`](docs/platform-media-assets.md) — original hero and inclusive business imagery, with generation prompts.
 
 - [`docs/phase-1-progress.md`](docs/phase-1-progress.md) — current delivery status and validation record.
 - [`docs/architecture-blueprint.md`](docs/architecture-blueprint.md) — proposed next milestone, decisions and approval gates.
