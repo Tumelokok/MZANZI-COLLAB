@@ -1,0 +1,83 @@
+.image-caption { margin: 18px 0 0; color: #716d65; font-size: 11px; line-height: 1.6; }
+.fiza-feature { background: #101116; color: white; padding: 75px 0; }
+.fiza-feature-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; align-items: center; }
+.fiza-portrait { margin: 0; position: relative; min-height: 440px; overflow: hidden; background: white; }
+.fiza-portrait > img { object-fit: cover; object-position: center 65%; }
+.fiza-portrait figcaption { position: absolute; bottom: 0; inset-inline: 0; padding: 20px 24px; color: white; background: linear-gradient(transparent,rgba(8,9,12,.9)); }
+.fiza-portrait figcaption strong { display: block; font-size: 25px; letter-spacing: -.04em; }
+.fiza-portrait figcaption span { font-size: 11px; }
+.fiza-feature h2 { font-size: clamp(36px,4.4vw,60px); line-height: 1.05; }
+.fiza-feature-copy > p:not(.eyebrow) { max-width: 590px; font-size: 16px; line-height: 1.75; color: #c9c7c3; }
+.fiza-topics { display: flex; flex-wrap: wrap; gap: 10px; margin: 25px 0 30px; }
+.fiza-topics span { border: 1px solid #48484b; border-radius: 24px; padding: 9px 12px; font-size: 11px; color: #e1ded8; }
+.fiza-feature small { display: block; margin-top: 22px; max-width: 480px; font-size: 11px; line-height: 1.6; color: #aaa8a3; }
+.guide-heading { padding: 80px 0 50px; }
+.guide-heading h1 { color: var(--ink); font-size: clamp(44px,5.6vw,76px); max-width: 1050px; line-height: 1.04; }
+.guide-heading h1 em, .guide-rates h2 em { color: var(--blue); }
+.guide-heading > p:not(.eyebrow) { max-width: 650px; color: #5b5b5d; font-size: 18px; line-height: 1.7; }
+.guide-jump { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.guide-jump a { padding: 11px 16px; border-radius: 25px; border: 1px solid #c8bfb1; font-size: 12px; font-weight: 650; }
+.guide-jump a:last-child { background: var(--gold); border-color: var(--gold); }
+.creator-guide section[id] { scroll-margin-top: 30px; }
+.guide-story { display: grid; grid-template-columns: .75fr 1.25fr; gap: 70px; padding: 20px 0 75px; align-items: start; }
+.guide-portrait { min-height: 560px; }
+.creator-guide h2 { font-size: clamp(32px,3.8vw,49px); line-height: 1.08; }
+.guide-story blockquote { margin: 25px 0; padding-left: 24px; border-left: 3px solid var(--gold); font-size: 17px; line-height: 1.8; color: #46464b; }
+.guide-story blockquote p + p { margin-top: 16px; }
+.people-card:last-child .people-photo img { object-position: 78% center; }
+.story-note { font-size: 11px; color: #757067; line-height: 1.7; }
+.guide-divider { border-block: 1px solid #d5cdc0; padding-block: 28px; }
+.guide-divider span { display: block; font-weight: 700; font-size: 19px; letter-spacing: -.025em; }
+.guide-divider p { margin: 8px 0 0; font-size: 13px; color: #666; }
+.guide-chapter { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; padding-block: 75px; }
+.guide-chapter p:not(.eyebrow), .guide-chapter li, .guide-rates p { font-size: 15px; line-height: 1.8; color: #5b5b5d; }
+.guide-chapter ul { padding-left: 20px; margin: 25px 0; }
+.guide-chapter li { padding-bottom: 10px; }
+.guide-chapter figure { margin: 0; }
+.guide-chapter figure img { width: 100%; height: auto; }
+.guide-chapter figcaption { font-size: 10px; color: #757067; margin-top: 12px; line-height: 1.6; }
+.guide-source { font-size: 11px; text-decoration: underline; text-underline-offset: 3px; color: #5b5b5d; }
+.guide-pitch { background: #121318; color: white; }
+.guide-pitch p:not(.eyebrow) { color: #d1ceca; }
+.pitch-example { padding: 34px; background: #24252b; border-top: 3px solid var(--gold); }
+.pitch-example > span, .negotiation-example span { display: block; text-transform: uppercase; letter-spacing: .1em; font-size: 10px; font-weight: 700; margin-bottom: 22px; }
+.pitch-example > span { color: var(--gold); }
+.guide-rates { padding-block: 75px; }
+.guide-lead { max-width: 750px; }
+.rate-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 18px; margin: 35px 0; }
+.rate-grid article { background: #eae4da; padding: 25px; }
+.rate-grid article > span { color: #796b54; font-size: 12px; }
+.rate-grid h3 { font-size: 24px; margin: 27px 0 15px; }
+.rate-grid p { font-size: 13px; margin-bottom: 0; }
+.negotiation-example { display: grid; grid-template-columns: 1fr 1.3fr; gap: 50px; padding: 38px; background: #ffe39b; }
+.negotiation-example h3 { font-size: 30px; line-height: 1.1; }
+.negotiation-example p { color: #514936; font-size: 14px; }
+.negotiation-example blockquote { margin: 0 0 20px; font-size: 19px; line-height: 1.7; }
+.negotiation-example small { font-size: 11px; line-height: 1.7; display: block; color: #665a3d; }
+.guide-rates > .guide-source { margin-top: 22px; font-size: 11px; }
+.guide-end { padding-block: 0 75px; }
+.shared-links { gap: 24px; }
+.business-hero-copy { text-align: left; }
+.business-hero-copy h1, .business-hero-copy > p:not(.eyebrow) { margin-left: 0; }
+.business-hero-copy .eyebrow, .business-hero-copy .detail-actions { justify-content: flex-start; }
+.business-hero-overlay { background: linear-gradient(90deg,rgba(8,9,12,.94),rgba(8,9,12,.7) 40%,rgba(8,9,12,.15)); }
+.community-hero img { height: auto; }
+@media (max-width: 1000px) and (min-width: 801px) { .shared-links { gap: 14px; } .shared-links a { font-size: 11px; } .rate-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 800px) {
+  .gateway-hero > img, .creators-page .detail-hero-photo { object-position: 75% center; }
+  .fiza-feature { padding-block: 55px; }
+  .fiza-feature-grid, .guide-story, .guide-chapter, .negotiation-example { grid-template-columns: 1fr; gap: 32px; }
+  .fiza-portrait { min-height: 360px; }
+  .fiza-feature-copy .button { width: 100%; }
+  .guide-heading { padding-block: 55px 35px; }
+  .guide-heading h1 { font-size: clamp(38px,10vw,60px); }
+  .guide-heading > p:not(.eyebrow) { font-size: 16px; }
+  .guide-story { padding-bottom: 50px; }
+  .guide-story blockquote { padding-left: 18px; font-size: 16px; }
+  .guide-chapter, .guide-rates { padding-block: 55px; }
+  .rate-grid { grid-template-columns: 1fr; }
+  .rate-grid h3 { margin-top: 16px; }
+  .negotiation-example, .pitch-example { padding: 25px; }
+  .guide-end { padding-bottom: 55px; }
+  .shared-links.open { gap: 0; }
+}
