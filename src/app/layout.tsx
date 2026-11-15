@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Mzansi's creative economy, connected.",
     images: [
       {
-        url: "/branding/og-image.png",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Mzansi Collab",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mzansi Collab | Creators. Brands. Opportunities.",
     description: "Mzansi's creative economy, connected.",
-    images: ["/branding/og-image.png"],
+    images: ["/opengraph-image"],
   },
 };
 

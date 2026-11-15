@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { BrandLogo } from "@/components/brand-logo";
 import Image from "next/image";
 import { ActionForm } from "@/components/action-form";
 import { signup, login, forgotPassword, resetPassword } from "@/app/auth/actions";
@@ -9,7 +10,7 @@ export function AuthScreen({ mode, referral = "", notice = "", initialRole = "cr
   const action = { signup, login, forgot: forgotPassword, reset: resetPassword }[mode];
   const submit = { signup: "Create account", login: "Log in", forgot: "Send reset link", reset: "Save new password" }[mode];
   return <main className="auth-screen">
-    <aside className="auth-story"><Link href="/" aria-label="Mzansi Collab home"><Image src="/branding/logo-dark-header.png" alt="Mzansi Collab" width={190} height={45} /></Link><div><p className="eyebrow">Creators. Brands. Opportunity.</p><h2>Bring your ambition.<br /><em>Find your people.</em></h2><p>A professional home for South Africa’s creative community.</p><Image src="/images/creator-duo.png" alt="Illustrative pair of creators working together" width={600} height={450} /></div></aside>
+    <aside className="auth-story"><BrandLogo priority /><div><p className="eyebrow">Creators. Brands. Opportunity.</p><h2>Bring your ambition.<br /><em>Find your people.</em></h2><p>A professional home for South Africa’s creative community.</p><Image src="/images/creator-duo.png" alt="Illustrative pair of creators working together" width={600} height={450} /></div></aside>
     <section className="auth-panel"><Link className="subtle-link" href="/">← Back to Mzansi Collab</Link><h1>{title}</h1>
       {notice && <p className="form-message" role="status">{notice}</p>}
       {!isSupabaseConfigured() && <p className="form-message">Account setup is in progress. Registration will open when the database is connected.</p>}

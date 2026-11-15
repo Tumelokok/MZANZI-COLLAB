@@ -25,8 +25,21 @@
   .business-hero-overlay { display: none; }
 }
 .auth-screen { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; }
+@media(max-width:800px) { .auth-screen { display: block; } }
 .auth-story { background: #111218; color: white; padding: 42px max(35px,7vw); display: flex; flex-direction: column; gap: 65px; }
-.auth-story > a img { width: 190px; height: auto; }
+.brand-lockup { display: inline-flex; align-items: center; gap: 13px; flex-shrink: 0; width: fit-content; text-decoration: none; color: white; }
+.brand-logo-mark { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 72px; height: 72px; overflow: hidden; }
+.brand-logo-mark img { width: 115%; max-width: none; height: auto; flex-shrink: 0; }
+.brand-wordmark { display: flex; flex-direction: column; gap: 4px; line-height: 1; }
+.brand-wordmark strong { font-size: 24px; font-weight: 850; letter-spacing: -.055em; }
+.brand-wordmark > span { font-size: 12px; letter-spacing: .32em; color: #a8f96c; font-weight: 650; }
+.shared-footer .footer-location { margin-top: 20px; font-size: 12px; color: #aaa; font-weight: 400; }
+.workspace-nav .brand-lockup { gap: 9px; }
+.workspace-nav .brand-logo-mark { width: 52px; height: 52px; }
+.workspace-nav .brand-wordmark strong { font-size: 21px; }
+.workspace-nav .brand-wordmark > span { font-size: 10px; }
+@media(max-width:1100px) and (min-width:801px) { .shared-header { gap: 18px; padding-inline: 24px; }.shared-header .brand-logo-mark { width: 50px; height: 50px; }.shared-header .brand-wordmark strong { font-size: 21px; }.workspace-nav .brand-wordmark strong { font-size: 16px; }.workspace-nav .brand-wordmark > span { font-size: 9px; }.workspace-nav .brand-logo-mark { width: 40px; height: 40px; } }
+@media(max-width:800px) { .brand-logo-mark { width: 62px; height: 62px; }.brand-wordmark strong { font-size: 22px; }.brand-wordmark > span { font-size: 11px; }.shared-header { padding-block: 12px; } }
 .auth-story h2 { font-size: clamp(36px,4vw,54px); line-height: 1.08; }
 .auth-story p:not(.eyebrow) { color: #c4c1bb; line-height: 1.7; }
 .auth-story > div img { width: 100%; height: auto; margin-top: 30px; border-radius: 8px; }
