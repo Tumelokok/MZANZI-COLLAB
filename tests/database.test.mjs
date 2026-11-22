@@ -31,6 +31,16 @@ test('database enforces roles, token accounting, referrals, ratings and review g
   async function as(id,sql,params=[]){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id||'']);await db.exec(`set role ${id?'authenticated':'anon'}`);return db.query(sql,params);}
   async function fails(id,sql,params=[],pattern){await assert.rejects(()=>as(id,sql,params),pattern);}
   for(let i=0;i<ids.length;i++) await root(`insert into auth.users values($1,now(),$2)`,[ids[i],JSON.stringify({role:i===2?'business':'creator',display_name:`Member ${i+1}`})]);
+  await db.exec(await readFile(new URL('../supabase/migrations/202611220001_creator_commitments.sql', import.meta.url),'utf8'));
+  const add="insert into public.creator_commitments(id, brand, deliverable, due_date) values($1,'Brand','Video','2026-12-01')";
+  await as(ids[0],add,[ids[0]]);
+  await fails(ids[0],add,[ids[0]],/duplicate key/);
+  await fails(ids[2],add,[ids[2]],/row-level security/);
+  await fails(null,'select * from public.creator_commitments',[],/permission denied/);
+  assert.equal((await as(ids[1],'select * from public.creator_commitments')).rows.length,0);
+  assert.equal((await as(ids[1],'update public.creator_commitments set delivered=true returning id')).rows.length,0);
+  assert.equal((await as(ids[0],"update public.creator_commitments set due_date='2026-12-02', delivered=true returning delivered")).rows[0].delivered,true);
+  assert.equal((await as(ids[0],'update public.creator_commitments set delivered=false returning delivered')).rows[0].delivered,false);
   await root("update public.accounts set created_at=now()-interval '8 days'");
   await root('update public.accounts set created_at=now() where id=$1',[ids[3]]);
   const inviter=(await root('select referral_code from public.accounts where id=$1',[ids[0]])).rows[0].referral_code;
