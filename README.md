@@ -4,7 +4,7 @@ The public web experience for **Mzansi Collab** — a South African platform in 
 
 ## Current status
 
-The public website and Phase 2 account foundation are implemented. Creator/business registration, login, profile dashboards, creator-only tokens, reviewed verification and community-rated discovery connect to Supabase. Campaign management and direct messaging remain planned. No public deployment has been made.
+The public website and Phase 2 account foundation are implemented. Creator/business registration, login, profile dashboards, creator-only tokens, reviewed verification and community-rated discovery connect to Supabase. Creators can track private brand deliverables in the dashboard after applying `supabase/migrations/202611220001_creator_commitments.sql` after the account migrations. Open commitments appear by due date and can be rescheduled, marked delivered or reopened. Campaign payments and direct messaging remain planned. No public deployment has been made.
 
 ## Run locally
 
