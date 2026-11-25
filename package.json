@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:campaigns": "node scripts/dev-campaigns-local.mjs",
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint",
-    "test:db": "node --test tests/database.test.mjs"
+    "test:db": "node --test tests/database.test.mjs tests/campaigns.database.test.mjs",
+    "test:campaigns": "node --test tests/campaigns.test.mjs tests/campaigns.database.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",

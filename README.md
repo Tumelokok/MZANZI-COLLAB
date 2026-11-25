@@ -4,7 +4,7 @@ The public web experience for **Mzansi Collab** — a South African platform in 
 
 ## Current status
 
-The public website and Phase 2 account foundation are implemented. Creator/business registration, login, profile dashboards, creator-only tokens, reviewed verification and community-rated discovery connect to Supabase. Campaign management and direct messaging remain planned. No public deployment has been made.
+The public website and Phase 2 account foundation are implemented. Creator/business registration, login, profile dashboards, creator-only tokens, reviewed verification and community-rated discovery connect to Supabase. The first Creator Intelligence feature is implemented locally: private brand deals, deliverable deadlines/publication and partial payment tracking. Its migration has not been applied to hosted Supabase. Direct messaging remains planned. No public deployment has been made.
 
 ## Run locally
 
@@ -19,6 +19,7 @@ Open [http://localhost:3000](http://localhost:3000). For production checks, run:
 ```bash
 npm run lint
 npm run test:db
+npm run test:campaigns
 npm run build
 ```
 
@@ -41,6 +42,7 @@ npm run build
 
 ## Documentation
 
+- [`docs/creator-intelligence-campaigns.md`](docs/creator-intelligence-campaigns.md) — local-only campaign setup, privacy tests and one deal from start to finish. Use `npm run dev:campaigns` after local Supabase setup to avoid the hosted `.env.local` connection.
 - [`docs/platform-phase-2.md`](docs/platform-phase-2.md) — implemented account layer, setup and validation.
 - [`docs/social-platform-capabilities.md`](docs/social-platform-capabilities.md) — follower-sync and task-verification capabilities and provider restrictions.
 - [`docs/platform-media-assets.md`](docs/platform-media-assets.md) — original hero and inclusive business imagery, with generation prompts.
